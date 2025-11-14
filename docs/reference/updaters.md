@@ -6,7 +6,7 @@ They each have a name and may be enabled by default. You can configure which upd
 `updaters` input on GitHub Actions and GitLab CI/CD. This is a comma-delimited list of updaters that should be enabled, for updaters that are enabled by default you can remove them by adding a minus before its name:
 
 ```
-updaters: -generic,packagejson
+updaters: -generic,packagejson,cargo
 ```
 
 ## Changelog
@@ -31,3 +31,10 @@ Learn more about this updater in ["Updating arbitrary files"](../guides/updating
 - **Default**: disabled
 
 This updater can update the `version` field in Node.js `package.json` files. The updater is disabled by default.
+
+## Rust `Cargo.toml` Updater
+
+- **Name**: `cargo`
+- **Default**: disabled
+
+This updater can update the `version` field in Rust `Cargo.toml` files. The updater is disabled by default.
